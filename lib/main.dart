@@ -1,6 +1,7 @@
 import 'package:app_flutter_form/src/bloc/provider.dart';
 import 'package:app_flutter_form/src/pages/home_page.dart';
 import 'package:app_flutter_form/src/pages/login_page.dart';
+import 'package:app_flutter_form/src/pages/producto_page.dart';
 import 'package:flutter/material.dart';
  
 void main() => runApp(MyApp());
@@ -11,13 +12,14 @@ class MyApp extends StatelessWidget {
     return Provider(child: MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      initialRoute: 'login',
+      initialRoute: 'home',
       routes: {
         'login' : (BuildContext context) => LoginPage(),
         'home' : (BuildContext context) => HomePage(),
+        'producto' : (BuildContext context) => ProductoPage(),
       },
       theme: ThemeData(
-        primaryColor: Colors.deepPurpleAccent
+        primaryColor: Colors.deepPurple
       ),
     ));
   }
